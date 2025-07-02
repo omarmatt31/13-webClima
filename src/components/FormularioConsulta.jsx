@@ -15,6 +15,12 @@ const FormularioConsulta = () => {
         formState: { errors },
     } = useForm()
 
+    useEffect(()=>{ 
+        obtenerClima({
+    inputLocalidad: "Tucuman",
+    inputPais: "Argentina"
+});
+    },[])
     const obtenerClima = async (data)=>{
         try{
             console.log(data)
