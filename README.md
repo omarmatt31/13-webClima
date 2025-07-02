@@ -1,12 +1,70 @@
-# React + Vite
+# ☀️ **Aplicación del Clima**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Autor:** Omar Mattos ✨  
+Aplicación web que consulta el clima en tiempo real para cualquier ciudad del mundo usando la API de OpenWeatherMap.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 **Características principales**  
 
-## Expanding the ESLint configuration
+### 🔍 **Búsqueda del clima**  
+- 🌍 Consulta por ciudad + país  
+- 📌 Validación de ubicaciones existentes  
+- ⏱️ Datos en tiempo real  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 **Visualización**  
+- 🌡️ Temperatura actual (ºC/ºF)  
+- 💧 Humedad y sensacion térmica
+- 📱 Diseño responsive  
+
+---
+
+## 🛠️ **Tecnologías utilizadas**  
+
+```plaintext
+Frontend:
+- HTML5, CSS3 (Flexbox/Grid)
+- JavaScript ES6+
+- React
+- Fetch API
+- OpenWeatherMap API
+
+```
+
+---
+
+## 🚀 **Configuración rápida**  
+
+1. Clona el repositorio:  
+```bash
+git clone https://github.com/omarmatt31/13-webClima.git
+```
+
+2. Abre `index.html` en tu navegador  
+
+
+---
+
+## 📌 **Requisitos de la API**  
+
+1. **Registro gratuito** en [OpenWeatherMap](https://openweathermap.org/)  
+2. **Límite**: 60 llamadas/minuto  
+3. **Formato país**: Código de 2 letras (ISO 3166)  
+
+---
+
+## 💡 **Mejoras posibles**  
+
+- [ ] Autocompletado de ciudades  
+- [ ] Pronóstico extendido (5 días)  
+- [ ] Geolocalización automática  
+- [ ] Cambio de unidades (ºC/ºF)  
+- [ ] Historial de búsquedas  
+
+---
+
+## 📜 **Licencia**  
+
+MIT License © 2023 [Omar Mattos](https://github.com/omarmatt31).  
+
+**¡Consulta el clima de cualquier parte del mundo!** 🌎🌤️
