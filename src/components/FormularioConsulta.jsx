@@ -5,6 +5,9 @@ import ConsultaClima from "./ConsultaClima";
 
 const FormularioConsulta = () => {
 
+    const [clima, setClima] = useState({});
+    const [mostrarSpinner, setMostrarSpinner] = useState(true)
+
     const {
         register,
         handleSubmit,
@@ -12,10 +15,31 @@ const FormularioConsulta = () => {
         formState: { errors },
     } = useForm()
 
+    const obtenerClima = async (data)=>{
+        try{
+            console.log(data)
+            
+            setMostrarSpinner(true)
+            const respuesta = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data.inputLocalidad},${data.inputPais}&appid=c36c0bf04fbc7b24d50e546d12b552f8&units=metric&lang=es`)
+            console.log(respuesta)
+            if(respuesta.status === 200){
+                console.log(respuesta)
+                const datos = await respuesta.json()
+                console.log(datos)
+                //guardar en el state frase
+                setClima(datos)
+                //actualizar el spinner
+                setMostrarSpinner(false)
+            }
+            }catch(error){
+            console.error(error)
+            }
+  }
+
     return (
         <>
         <section className="container bg-info p-4 rounded-3 w-25">
-            <Form onSubmit={handleSubmit()}>
+            <Form onSubmit={handleSubmit(obtenerClima)}>
                     <Form.Group className="mb-2 d-flex" controlId="formBasicNombre">
                         <Form.Label className="text-light mx-3">Localidad: </Form.Label>
                         <Form.Control type="text" placeholder="Ej: Salta" {...register('inputLocalidad', {
@@ -44,7 +68,7 @@ const FormularioConsulta = () => {
                 </Form>
         </section>
         <section>
-            <ConsultaClima></ConsultaClima>
+            <ConsultaClima clima={clima}></ConsultaClima>
         </section>
         </>
     );

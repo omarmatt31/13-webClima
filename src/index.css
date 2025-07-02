@@ -2,7 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
+  background: #07ffea;
+  background: linear-gradient(180deg, rgba(7, 255, 234, 1) 0%, rgba(255, 255, 255, 1) 31%, rgba(255, 255, 255, 1) 92%, rgba(0, 64, 57, 1) 100%);
 }
 
 main{
