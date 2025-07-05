@@ -1,5 +1,9 @@
 
 const ConsultaClima = ({clima}) => {
+    if (!clima.name || !clima.weather || !clima.main) {
+        return null;
+    }
+
     return (
         
         <section className='container w-50 bg-info my-4 p-4 text-light rounded-3'>

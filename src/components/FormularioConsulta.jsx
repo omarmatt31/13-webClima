@@ -24,7 +24,6 @@ const FormularioConsulta = () => {
     const obtenerClima = async (data)=>{
         try{
 
-            
             setMostrarSpinner(true)
             const respuesta = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data.inputLocalidad},${data.inputPais}&appid=c36c0bf04fbc7b24d50e546d12b552f8&units=metric&lang=es`)
             console.log(respuesta)
