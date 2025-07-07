@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     <main>
-      <h1 className="text-center my-4">Clima</h1>
+      <h1 className="text-center my-4 text-secondary">Clima</h1>
       <FormularioConsulta></FormularioConsulta>
     </main>
     <footer className="bg-dark text-light text-center py-3">
