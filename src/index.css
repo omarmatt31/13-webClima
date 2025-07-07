@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 #root{
   min-height: 100vh;
   display: flex;
@@ -8,4 +10,16 @@
 
 main{
   flex-grow: 1;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.fondoContenedor{
+  background: #02C4B4;
+}
+.fuenteTemperatura{
+  font-size: 5rem;
+  font-family: "Oswald", sans-serif;
+    font-style: normal;
 }
